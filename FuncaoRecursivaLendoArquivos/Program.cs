@@ -20,17 +20,17 @@ namespace FuncaoRecursivaLendoArquivos
                         Console.WriteLine(linha);
                     }
                 }
+                LerArquivo(nome, numero_arquivo + 1); // Chama a função incrementando um ao número do arquivo
             } else
             {
-                Console.ReadKey();
+                Console.WriteLine("Não existem mais arquivos para Ler!");
             }
-
-            LerArquivo(nome,numero_arquivo+1); // Chama a função incrementando um ao número do arquivo
         }
 
         static void Main(string[] args)
         {
             LerArquivo("arq", 1);
+            Console.ReadKey();
         }
     }
 }
