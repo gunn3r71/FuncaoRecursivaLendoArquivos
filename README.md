@@ -5,7 +5,7 @@
 <h2>Como utilizar este código?</h2>
 
 <p>
-  Para utilizar testar este código com o visual studio, siga as instruções abaixo: 
+  Para testar este código com o visual studio, siga as instruções abaixo: 
   
   <ol type="I">
     <li>Faça um git clone do repositório</li>
