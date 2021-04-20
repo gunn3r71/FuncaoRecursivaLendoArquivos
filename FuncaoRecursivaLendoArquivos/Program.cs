@@ -21,7 +21,7 @@ namespace FuncaoRecursivaLendoArquivos
 
         static void Main(string[] args)
         {
-            
+            LerArquivo(@"C:\ArquivosDotNetRead\arq1.txt");
         }
     }
 }
