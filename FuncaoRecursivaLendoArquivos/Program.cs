@@ -7,14 +7,14 @@ namespace FuncaoRecursivaLendoArquivos
     class Program
     {
         //Programa que vai ler os arquivos de uma pasta chamada ArquivosDotNetRead
-        private static void LerArquivo(string arq)
+        private static void LerArquivo(string nome_arquivo)
         {
-            using (StreamReader arquivo = File.OpenText(arq))
+            using (StreamReader arquivo = File.OpenText(nome_arquivo))
             {
                 string linha;
                 while ((linha = arquivo.ReadLine()) != null)
                 {
-                    ThreadPool.QueueUserWorkItem(ProcessaLinha, linha);
+                    Console.WriteLine(linha);
                 }
             }
         }
