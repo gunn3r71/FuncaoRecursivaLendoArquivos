@@ -9,9 +9,8 @@ namespace FuncaoRecursivaLendoArquivos
         //Programa que vai ler os arquivos de uma pasta chamada ArquivosDotNetRead
         private static void LerArquivo(string nome,int numero_arquivo)
         {
-            string diretorio = @"C:\ArquivosDotNetRead\";
-            string nome_arquivo = $"{diretorio}{nome}{numero_arquivo}.txt";
-            if (File.Exists(nome_arquivo))
+            string nome_arquivo = $@"C:\ArquivosDotNetRead\{nome}{numero_arquivo}.txt";
+            if (File.Exists(nome_arquivo)) // verifica se arquivo existe
             {
                 using (StreamReader arquivo = File.OpenText(nome_arquivo)) // Linha que abre o arquivo
                 {
@@ -26,7 +25,7 @@ namespace FuncaoRecursivaLendoArquivos
                 Console.ReadKey();
             }
 
-            LerArquivo(nome,numero_arquivo+1);
+            LerArquivo(nome,numero_arquivo+1); // Chama a função incrementando um ao número do arquivo
         }
 
         static void Main(string[] args)
